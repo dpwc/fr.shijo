@@ -1,0 +1,2635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://shijocm.com/publications/">
+    <title>Publications of Fr. Dr. Shijo Antony CM | Books & Research</title>
+    <meta name="description"
+        content="Browse books, research papers, journal articles, and academic publications authored by Fr. Dr. Shijo Antony CM in one place.">
+    <meta name="robots" content="index, follow">
+
+    <meta name="author" content="Fr. Dr. Shijo Antony CM">
+
+    <meta name="keywords"
+        content="Fr. Dr. Shijo Antony CM, Shijo Antony, CM, Vincentian, publications, books, research, blogs, theology, education">
+
+    <meta name="language" content="English">
+
+    <meta name="revisit-after" content="7 days">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --forest: #2F5C56;
+            --forest-mid: #3D7A72;
+            --forest-light: #4A8E85;
+            --sage: #5BA4A4;
+            --sage-light: #8CC4C4;
+            --sage-pale: #D1ECEC;
+            --sage-ghost: #E8F4F4;
+            --gold: #C9944A;
+            --gold-light: #E0BB80;
+            --gold-pale: #F5E6CC;
+            --rose: #C47A7A;
+            --rose-pale: #F4E0E0;
+            --rose-soft: #F9E8E8;
+            --lavender: #8B7EB8;
+            --lavender-pale: #E4DDF2;
+            --lavender-soft: #F0EBF8;
+            --sky: #6AA0D4;
+            --sky-pale: #D6E6F5;
+            --sky-soft: #EAF1FA;
+            --peach: #E8B4A0;
+            --peach-pale: #F8E8E0;
+            --mint: #A8D8C8;
+            --mint-pale: #E0F2EC;
+            --cream: #FAF8F4;
+            --cream-dark: #EDE8E0;
+            --charcoal: #1A2E2C;
+            --charcoal-soft: #3A5553;
+            --muted: #6A8A88;
+            --emergency: #D94F4F;
+            --emergency-dark: #B83E3E;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--charcoal);
+            overflow-x: hidden;
+            line-height: 1.65;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-hand {
+            font-family: 'Caveat', cursive;
+        }
+
+        ::selection {
+            background: var(--sage-pale);
+            color: var(--charcoal);
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--cream);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--sage-light);
+            border-radius: 3px;
+        }
+
+        /* ═══════════ LOADER ═══════════ */
+        #loader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: var(--cream);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 1.2s cubic-bezier(.4, 0, .2, 1), visibility 1.2s;
+        }
+
+        #loader.hidden {
+            opacity: 0 !important;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loader-leaf-wrap {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 24px;
+            animation: loaderBreathe 3s ease-in-out infinite;
+        }
+
+        .loader-leaf-wrap svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        @keyframes loaderBreathe {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: .55;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        .loader-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--forest);
+            margin-bottom: 24px;
+            letter-spacing: .5px;
+        }
+
+        .loader-bar-track {
+            width: 160px;
+            height: 3px;
+            background: var(--cream-dark);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .loader-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--sage), var(--gold));
+            border-radius: 3px;
+            transition: width .6s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        /* ═══════════ FALLING LEAVES ═══════════ */
+        #fallingLeaves {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .falling-leaf {
+            position: absolute;
+            top: -8%;
+            will-change: transform, opacity;
+            animation: leafFall linear infinite;
+        }
+
+        .falling-leaf svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        @keyframes leafFall {
+            0% {
+                transform: translateY(-5vh) translateX(0px) rotate(0deg) scale(1);
+                opacity: 0;
+            }
+
+            4% {
+                opacity: var(--l-alpha, 0.12);
+            }
+
+            25% {
+                transform: translateY(25vh) translateX(calc(var(--l-sway, 30px))) rotate(90deg) scale(0.98);
+            }
+
+            50% {
+                transform: translateY(50vh) translateX(calc(var(--l-sway, 30px) * -0.6)) rotate(180deg) scale(1.02);
+            }
+
+            75% {
+                transform: translateY(75vh) translateX(calc(var(--l-sway, 30px) * 0.8)) rotate(270deg) scale(0.97);
+            }
+
+            94% {
+                opacity: var(--l-alpha, 0.12);
+            }
+
+            100% {
+                transform: translateY(108vh) translateX(calc(var(--l-sway, 30px) * -0.3)) rotate(360deg) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* ═══════════ NAV ═══════════ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 16px 28px;
+            background: rgba(250, 248, 244, .85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: padding .4s ease, box-shadow .4s ease;
+            will-change: transform;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .nav.scrolled {
+            background: rgba(250, 248, 244, .95);
+            box-shadow: 0 1px 30px rgba(47, 92, 86, .06);
+            padding: 10px 28px;
+        }
+
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--forest);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform .4s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .nav-logo:hover .nav-logo-icon {
+            transform: rotate(-8deg) scale(1.05);
+        }
+
+        .nav-logo-icon svg {
+            width: 20px;
+            height: 20px;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal-soft);
+            font-size: 13.5px;
+            font-weight: 500;
+            letter-spacing: .3px;
+            transition: color .3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--sage);
+            border-radius: 1px;
+            transition: width .3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--forest);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--forest);
+            font-weight: 600;
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--forest) !important;
+            color: white !important;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            transition: all .3s !important;
+            box-shadow: 0 4px 18px rgba(47, 92, 86, .2);
+        }
+
+        .nav-cta:hover {
+            background: var(--forest-mid) !important;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 24px rgba(47, 92, 86, .3);
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--charcoal);
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            position: relative;
+            transition: background .3s;
+        }
+
+        .mobile-toggle:hover {
+            background: var(--sage-ghost);
+        }
+
+        .mobile-toggle .icon-menu,
+        .mobile-toggle .icon-close {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity .3s, transform .3s;
+        }
+
+        .mobile-toggle.active .icon-menu {
+            opacity: 0;
+            transform: rotate(90deg);
+            pointer-events: none;
+        }
+
+        .mobile-toggle.active .icon-close {
+            opacity: 1;
+            transform: rotate(0);
+        }
+
+        .mobile-toggle:not(.active) .icon-close {
+            opacity: 0;
+            transform: rotate(-90deg);
+            pointer-events: none;
+        }
+
+        .mobile-toggle:not(.active) .icon-menu {
+            opacity: 1;
+            transform: rotate(0);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(250, 248, 244, .97);
+            backdrop-filter: blur(24px);
+            z-index: 99;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .35s;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 500;
+            transition: color .3s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--forest);
+        }
+
+        /* ═══════════ PAGE HERO ═══════════ */
+        .page-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 140px 32px 60px;
+            text-align: center;
+        }
+
+        .page-hero-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .page-hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: .3;
+        }
+
+        .ph-blob-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--gold-pale);
+            top: -20%;
+            right: -5%;
+        }
+
+        .ph-blob-2 {
+            width: 450px;
+            height: 450px;
+            background: var(--sage-pale);
+            bottom: -15%;
+            left: -8%;
+        }
+
+        .ph-blob-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--lavender-pale);
+            top: 30%;
+            left: 40%;
+        }
+
+        .page-hero-decor {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .ph-decor-1 {
+            width: 80px;
+            height: 80px;
+            border: 1.5px dashed var(--sage-light);
+            border-radius: 50%;
+            opacity: .12;
+            top: 15%;
+            left: 6%;
+            animation: spinSlow 70s linear infinite;
+        }
+
+        .ph-decor-2 {
+            width: 32px;
+            height: 32px;
+            border: 1.5px solid var(--gold-light);
+            border-radius: 50%;
+            top: 25%;
+            right: 8%;
+            opacity: .15;
+            animation: floatY 7s ease-in-out infinite;
+        }
+
+        .ph-decor-3 {
+            width: 6px;
+            height: 6px;
+            background: var(--sage-light);
+            border-radius: 50%;
+            bottom: 20%;
+            left: 12%;
+            opacity: .2;
+            animation: floatY 5s ease-in-out infinite -1s;
+        }
+
+        .ph-decor-4 {
+            width: 4px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 50%;
+            top: 18%;
+            right: 20%;
+            opacity: .2;
+            animation: floatY 6s ease-in-out infinite -2s;
+        }
+
+        @keyframes spinSlow {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes floatY {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-14px);
+            }
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .page-hero-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, var(--sage-ghost), var(--gold-pale));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            box-shadow: 0 8px 32px rgba(47, 92, 86, .08);
+        }
+
+        .page-hero-icon i {
+            width: 32px;
+            height: 32px;
+            color: var(--forest);
+        }
+
+        .page-hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--forest);
+            margin-bottom: 20px;
+        }
+
+        .page-hero-label::before,
+        .page-hero-label::after {
+            content: '';
+            width: 28px;
+            height: 1.5px;
+            background: var(--sage-light);
+            border-radius: 1px;
+        }
+
+        .page-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -.5px;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+        }
+
+        .page-hero h1 .hl {
+            position: relative;
+            display: inline-block;
+        }
+
+        .page-hero h1 .hl::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: -2px;
+            right: -2px;
+            height: 12px;
+            background: var(--gold-pale);
+            border-radius: 3px;
+            z-index: -1;
+            opacity: .6;
+        }
+
+        .page-hero-desc {
+            font-size: 17px;
+            line-height: 1.75;
+            color: var(--charcoal-soft);
+            max-width: 540px;
+            margin: 0 auto 32px;
+        }
+
+        .page-hero-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .ph-stat {
+            text-align: center;
+        }
+
+        .ph-stat-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--forest);
+            line-height: 1;
+        }
+
+        .ph-stat-label {
+            font-size: 12px;
+            color: var(--muted);
+            font-weight: 500;
+            margin-top: 4px;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+
+        .ph-stat-divider {
+            width: 1px;
+            height: 40px;
+            background: var(--cream-dark);
+        }
+
+        /* ═══════════ SECTION COMMON ═══════════ */
+        .section-wrap {
+            padding: 80px 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--forest);
+            margin-bottom: 16px;
+        }
+
+        .section-label::before,
+        .section-label::after {
+            content: '';
+            width: 28px;
+            height: 1.5px;
+            background: var(--sage-light);
+            border-radius: 1px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 3.5vw, 44px);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -.5px;
+            color: var(--charcoal);
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            line-height: 1.75;
+            color: var(--charcoal-soft);
+            max-width: 560px;
+            margin: 0 auto;
+            font-size: 15.5px;
+        }
+
+        /* ═══════════ FILTER TABS ═══════════ */
+        .filter-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--charcoal-soft);
+            background: transparent;
+            border: 1.5px solid var(--cream-dark);
+            cursor: pointer;
+            transition: all .35s cubic-bezier(.4, 0, .2, 1);
+            white-space: nowrap;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--sage-light);
+            color: var(--forest);
+            background: var(--sage-ghost);
+        }
+
+        .filter-btn.active {
+            background: var(--forest);
+            color: white;
+            border-color: var(--forest);
+            box-shadow: 0 4px 18px rgba(47, 92, 86, .2);
+        }
+
+        /* ═══════════ BOOK GRID ═══════════ */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        /* ═══════════ BOOK CARD ═══════════ */
+        .book-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            background: white;
+            border: 1px solid rgba(47, 92, 86, .05);
+            box-shadow: 0 4px 20px rgba(47, 92, 86, .04);
+            transition: all .5s cubic-bezier(.4, 0, .2, 1);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(47, 92, 86, .12);
+            border-color: var(--sage-pale);
+        }
+
+        /* Cover area */
+        .book-cover-wrap {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            background: linear-gradient(150deg, var(--sage-ghost), var(--lavender-pale));
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .6s cubic-bezier(.4, 0, .2, 1), filter .6s;
+        }
+
+        .book-card:hover .book-cover {
+            transform: scale(1.06);
+            filter: blur(2px) brightness(0.6);
+        }
+
+        /* Placeholder cover when no image */
+        .book-cover-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+            transition: filter .6s;
+        }
+
+        .book-card:hover .book-cover-placeholder {
+            filter: blur(2px) brightness(0.6);
+        }
+
+        .book-cover-placeholder .bcp-icon {
+            width: 48px;
+            height: 48px;
+            color: var(--sage-light);
+            margin-bottom: 12px;
+            opacity: .6;
+        }
+
+        .book-cover-placeholder .bcp-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--forest);
+            line-height: 1.3;
+            margin-bottom: 6px;
+        }
+
+        .book-cover-placeholder .bcp-author {
+            font-family: 'Caveat', cursive;
+            font-size: 16px;
+            color: var(--forest-mid);
+            opacity: .7;
+        }
+
+        /* Genre badge */
+        .book-genre-badge {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+
+            top: auto;
+            right: auto;
+
+            z-index: 6;
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 10.5px;
+            font-weight: 600;
+
+            letter-spacing: .5px;
+            text-transform: uppercase;
+            z-index: 3;
+            backdrop-filter: blur(50px);
+            -webkit-backdrop-filter: blur(25px);
+        }
+
+        .badge-sage {
+            background: rgba(91, 164, 164, .2);
+            color: #83f095;
+        }
+
+        .badge-gold {
+            background: rgba(201, 148, 74, .2);
+            color: #e6cc8c;
+        }
+
+        .badge-rose {
+            background: rgba(196, 122, 122, .2);
+            color: #e38787;
+        }
+
+        .badge-lavender {
+            background: rgba(139, 126, 184, .2);
+            color: #9884dd;
+        }
+
+        .badge-sky {
+            background: rgba(106, 160, 212, .2);
+            color: #9ec5e8;
+        }
+
+        .badge-mint {
+            background: rgba(168, 216, 200, .2);
+            color: #a1e4c6;
+        }
+
+        /* Year badge */
+        .book-year-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            background: rgba(255, 255, 255, .85);
+            color: var(--charcoal-soft);
+            z-index: 3;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* Hover overlay */
+        .book-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            opacity: 0;
+            transition: opacity .45s cubic-bezier(.4, 0, .2, 1);
+            background: linear-gradient(0deg, rgba(26, 46, 44, .92) 0%, rgba(26, 46, 44, .7) 50%, rgba(26, 46, 44, .3) 100%);
+        }
+
+        .book-card:hover .book-overlay {
+            opacity: 1;
+        }
+
+        .book-overlay-inner {
+            transform: translateY(20px);
+            transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .book-card:hover .book-overlay-inner {
+            transform: translateY(0);
+        }
+
+        .book-overlay-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            line-height: 1.25;
+            margin-bottom: 8px;
+        }
+
+        .book-overlay-desc {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .75);
+            line-height: 1.6;
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .book-overlay-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        .book-meta-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 600;
+            background: rgba(255, 255, 255, .12);
+            color: rgba(255, 255, 255, .85);
+            backdrop-filter: blur(4px);
+        }
+
+        .book-meta-chip i {
+            width: 12px;
+            height: 12px;
+        }
+
+        .book-overlay-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-buy {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12.5px;
+            font-weight: 600;
+            background: var(--gold);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: all .3s cubic-bezier(.4, 0, .2, 1);
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(201, 148, 74, .35);
+        }
+
+        .btn-buy:hover {
+            background: var(--gold-light);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 24px rgba(201, 148, 74, .45);
+        }
+
+        .btn-buy i {
+            width: 14px;
+            height: 14px;
+        }
+
+        .btn-share {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .2);
+            cursor: pointer;
+            transition: all .3s;
+            position: relative;
+        }
+
+        .btn-share:hover {
+            background: rgba(255, 255, 255, .25);
+            transform: translateY(-1px);
+        }
+
+        .btn-share i {
+            width: 15px;
+            height: 15px;
+        }
+
+        /* Share dropdown */
+        .share-dropdown {
+            position: absolute;
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%) scale(0.9);
+            background: white;
+            border-radius: 16px;
+            padding: 12px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, .15);
+            display: flex;
+            gap: 6px;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .3s cubic-bezier(.4, 0, .2, 1);
+            z-index: 20;
+            white-space: nowrap;
+        }
+
+        .share-dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: white;
+        }
+
+        .share-dropdown.open {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(-50%) scale(1);
+        }
+
+        .share-opt {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: all .25s;
+            color: white;
+        }
+
+        .share-opt:hover {
+            transform: translateY(-2px);
+        }
+
+        .share-opt i {
+            width: 16px;
+            height: 16px;
+        }
+
+        .so-whatsapp {
+            background: #25D366;
+        }
+
+        .so-facebook {
+            background: #1877F2;
+        }
+
+        .so-twitter {
+            background: #1DA1F2;
+        }
+
+        .so-link {
+            background: var(--forest);
+        }
+
+        .so-email {
+            background: var(--gold);
+        }
+
+        /* Bottom info bar */
+        .book-info-bar {
+            padding: 20px 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex-grow: 1;
+        }
+
+        .book-info-bar h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--charcoal);
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .book-info-bar .book-sub {
+            font-family: 'Caveat', cursive;
+            font-size: 15px;
+            color: var(--forest-mid);
+        }
+
+        .book-info-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .book-price {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--forest);
+
+            text-align: left;
+        }
+
+
+        .book-price .currency {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--muted);
+            margin-right: 2px;
+        }
+
+        .book-rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            text-align: right;
+        }
+
+        .book-rating i {
+            width: 14px;
+            height: 14px;
+            color: var(--gold);
+            fill: var(--gold);
+        }
+
+        .book-rating span {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            margin-left: 2px;
+        }
+
+        .book-info-bottom {
+            position: relative;
+            padding: 0;
+        }
+
+        .book-price-static {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .book-rating-static {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* ═══════════ FEATURED BOOK ═══════════ */
+        .featured-section {
+            background: linear-gradient(180deg, var(--cream), var(--gold-pale) 30%, var(--peach-pale) 60%, var(--cream));
+        }
+
+        .featured-card {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 10px;
+            background: white;
+            border-radius: 28px;
+            padding: 40px;
+            border: 1px solid rgba(47, 92, 86, .05);
+            box-shadow: 0 8px 40px rgba(47, 92, 86, .06);
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: -20px;
+            margin-bottom: -90px;
+        }
+
+        .featured-card::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--gold-pale);
+            opacity: .4;
+        }
+
+        .featured-card::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: -40px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: var(--sage-ghost);
+            opacity: .4;
+        }
+
+        .featured-cover-wrap {
+            position: relative;
+            z-index: 2;
+        }
+
+        .featured-cover {
+            width: 100%;
+            aspect-ratio: 3/4;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 16px 48px rgba(47, 92, 86, .15);
+            position: relative;
+        }
+
+        .featured-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-cover-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(150deg, var(--gold-pale), var(--sage-ghost), var(--lavender-pale));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+            text-align: center;
+        }
+
+        .featured-cover-placeholder .fcp-icon {
+            width: 56px;
+            height: 56px;
+            color: var(--gold);
+            margin-bottom: 14px;
+            opacity: .6;
+        }
+
+        .featured-cover-placeholder .fcp-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--charcoal);
+            line-height: 1.25;
+            margin-bottom: 8px;
+        }
+
+        .featured-cover-placeholder .fcp-author {
+            font-family: 'Caveat', cursive;
+            font-size: 18px;
+            color: var(--forest-mid);
+        }
+
+        .featured-ribbon {
+            position: absolute;
+            top: -6px;
+            right: 20px;
+            background: var(--gold);
+            color: white;
+            padding: 6px 16px 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 0 0 10px 10px;
+            z-index: 5;
+            box-shadow: 0 4px 12px rgba(201, 148, 74, .35);
+        }
+
+        .featured-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .featured-content .section-label {
+            justify-content: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .featured-content .section-label::before {
+            display: none;
+        }
+
+        .featured-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 2.5vw, 34px);
+            font-weight: 700;
+            color: var(--charcoal);
+            line-height: 1.2;
+            margin-bottom: 8px;
+            letter-spacing: -.3px;
+        }
+
+        .featured-content .feat-author {
+            font-family: 'Caveat', cursive;
+            font-size: 22px;
+            color: var(--forest-mid);
+            margin-bottom: 18px;
+        }
+
+        .featured-content .feat-desc {
+            font-size: 15px;
+            line-height: 1.75;
+            color: var(--charcoal-soft);
+            margin-bottom: 24px;
+            max-width: 500px;
+        }
+
+        .featured-meta-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+        }
+
+        .feat-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: var(--sage-ghost);
+            border-radius: 10px;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--forest);
+        }
+
+        .feat-meta-item i {
+            width: 15px;
+            height: 15px;
+            color: var(--gold);
+        }
+
+        .featured-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background: var(--forest);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14.5px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all .35s cubic-bezier(.4, 0, .2, 1);
+            box-shadow: 0 5px 24px rgba(47, 92, 86, .2);
+        }
+
+        .btn-primary:hover {
+            background: var(--forest-mid);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(47, 92, 86, .3);
+        }
+
+        .btn-primary i {
+            width: 17px;
+            height: 17px;
+            transition: transform .3s;
+        }
+
+        .btn-primary:hover i {
+            transform: translateX(3px);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--charcoal);
+            padding: 14px 26px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14.5px;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1.5px solid var(--cream-dark);
+            cursor: pointer;
+            transition: all .35s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--sage-light);
+            background: var(--sage-ghost);
+            color: var(--forest);
+        }
+
+        .btn-ghost i {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* ═══════════ QUOTE BANNER ═══════════ */
+        .quote-banner {
+            background: var(--forest);
+            padding: 60px 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .quote-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .quote-mark {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            color: var(--gold-light);
+            line-height: 1;
+            opacity: .4;
+            margin-bottom: -10px;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(20px, 2.5vw, 28px);
+            font-style: italic;
+            color: white;
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+
+        .quote-author {
+            font-family: 'Caveat', cursive;
+            font-size: 20px;
+            color: var(--gold-light);
+        }
+
+        /* ═══════════ CTA SECTION ═══════════ */
+        .cta-section {
+            background: linear-gradient(180deg, var(--cream), var(--sage-ghost) 50%, var(--cream));
+        }
+
+        .cta-box {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 8px 40px rgba(47, 92, 86, .06);
+            border: 1px solid rgba(47, 92, 86, .05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--gold-pale);
+            opacity: .5;
+        }
+
+        .cta-box::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--sage-pale);
+            opacity: .4;
+        }
+
+        .cta-box>* {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, var(--sage-ghost), var(--gold-pale));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .cta-icon i {
+            width: 28px;
+            height: 28px;
+            color: var(--forest);
+        }
+
+        .cta-box h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 12px;
+        }
+
+        .cta-box p {
+            font-size: 15px;
+            color: var(--charcoal-soft);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        /* ═══════════ FOOTER ═══════════ */
+        .site-footer {
+            background: var(--charcoal);
+            color: rgba(255, 255, 255, .6);
+            padding: 48px 32px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-copy {
+            font-size: 13px;
+        }
+
+        .footer-copy a {
+            color: var(--gold-light);
+            text-decoration: none;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, .5);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color .3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+        }
+
+        /* ═══════════ REVEAL ANIMATION ═══════════ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .8s cubic-bezier(.25, .1, .25, 1), transform .8s cubic-bezier(.25, .1, .25, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: .1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: .2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: .3s;
+        }
+
+        .reveal-delay-4 {
+            transition-delay: .4s;
+        }
+
+        .reveal-delay-5 {
+            transition-delay: .5s;
+        }
+
+        /* ═══════════ TOAST ═══════════ */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--charcoal);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13.5px;
+            font-weight: 500;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, .2);
+            z-index: 9999;
+            opacity: 0;
+            transition: all .4s cubic-bezier(.4, 0, .2, 1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast i {
+            width: 16px;
+            height: 16px;
+            color: var(--gold-light);
+        }
+
+        /* ═══════════ RESPONSIVE ═══════════ */
+        @media (max-width: 1024px) {
+            .featured-card {
+                grid-template-columns: 260px 1fr;
+                gap: 36px;
+                padding: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .page-hero {
+                padding: 120px 20px 50px;
+                min-height: auto;
+            }
+
+            .section-wrap {
+                padding: 60px 20px;
+            }
+
+            .books-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 24px;
+            }
+
+            .featured-card {
+                grid-template-columns: 1fr;
+                gap: 28px;
+                padding: 28px;
+            }
+
+            .featured-cover-wrap {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+
+            .page-hero-stats {
+                gap: 24px;
+            }
+
+            .filter-bar {
+                gap: 6px;
+            }
+
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .books-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .section-label {
+                margin-top: 10px;
+            }
+
+            .page-hero h1 {
+                font-size: 28px;
+            }
+
+            .book-overlay {
+                padding: 18px;
+            }
+
+            .book-overlay-title {
+                font-size: 17px;
+            }
+
+            .book-overlay-actions {
+                flex-direction: column;
+            }
+
+            .btn-buy {
+                justify-content: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .falling-leaf,
+            .ph-decor-1,
+            .ph-decor-2,
+            .ph-decor-3,
+            .ph-decor-4 {
+                animation: none !important;
+            }
+
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+
+            .book-card,
+            .book-cover,
+            .book-overlay,
+            .book-overlay-inner {
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-leaf-wrap">
+            <i data-lucide="book-open"></i>
+        </div>
+        <div class="loader-text">Publications</div>
+        <div class="loader-bar-track">
+            <div class="loader-bar-fill" id="loaderFill"></div>
+        </div>
+    </div>
+
+    <!-- FALLING LEAVES -->
+    <div id="fallingLeaves"></div>
+
+    <!-- NAV -->
+    <nav class="nav" id="mainNav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <i data-lucide="book-open"></i>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/published/" class="active">Published</a></li>
+                <li><a href="/blogs/">Blogs</a></li>
+
+                <li><a href="/#contact" class="nav-cta">Connect</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span class="icon-menu"><i data-lucide="menu" style="width:22px;height:22px;"></i></span>
+                <span class="icon-close"><i data-lucide="x" style="width:22px;height:22px;"></i></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Home</a>
+        <a href="/contact/">Contact</a>
+        <a href="/published/">Publications</a>
+        <a href="/blogs/">Blogs</a>
+    </div>
+
+    <!-- PAGE HERO -->
+
+
+    <!-- FEATURED BOOK -->
+    <section class="section-wrap featured-section" id="featured">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <div class="section-label">Library of Work</div>
+                <h2 class="section-title">Featured Publication</h2>
+
+            </div>
+            <div class="featured-card reveal reveal-delay-2">
+                <div class="featured-cover-wrap">
+                    <div class="featured-cover">
+                        <div class="featured-cover-placeholder">
+                            <img src="../images/cover.webp" alt="Living Your Own Symphony">
+                        </div>
+                    </div>
+                    <div class="featured-ribbon">Featured</div>
+                </div>
+                <div class="featured-content">
+                    <div class="section-label">Bestselling 2026</div>
+                    <h2>Living Your Own Symphony</h2>
+                    <div class="feat-author">by Fr. Dr. Shijo Antony CM</div>
+                    <p class="feat-desc">What if the life you're rushing through is a masterpiece waiting to be heard?
+                        Blending timeless wisdom with modern psychology, this book shows you how
+                        to quiet a restless mind, carry life's burdens without breaking, turn wounds into growth, and
+                        build the discipline your
+                        dreams deserve.
+                        Turn the first page. Begin your music.</p>
+                    <div class="featured-meta-row">
+                        <div class="feat-meta-item">
+                            <i data-lucide="calendar"></i>
+                            2026
+                        </div>
+                        <div class="feat-meta-item">
+                            <i data-lucide="file-text"></i>
+                            172 Pages
+                        </div>
+                        <div class="feat-meta-item">
+                            <i data-lucide="globe"></i>
+                            English
+                        </div>
+                        <div class="feat-meta-item">
+                            <i data-lucide="star"></i>
+                            4.8 Rating
+                        </div>
+                    </div>
+                    <div class="featured-actions">
+                        <a href="#" class="btn-primary" onclick="showToast('Redirecting to purchase page...')">
+                            <i data-lucide="shopping-bag"></i>
+                            Buy Now — ₹200
+                        </a>
+                        <button class="btn-ghost" onclick="showToast('Share link copied to clipboard!')">
+                            <i data-lucide="share-2"></i>
+                            Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALL BOOKS -->
+    <section class="section-wrap" id="allBooks">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <div class="section-label">Complete Collection</div>
+                <h2 class="section-title">All Publications</h2>
+
+            </div>
+
+            <div class="filter-bar reveal reveal-delay-1">
+                <button class="filter-btn active" data-filter="all">All Books</button>
+                <button class="filter-btn" data-filter="mindfulness">Mindfulness</button>
+                <button class="filter-btn" data-filter="positive-psychology">Positive Psychology</button>
+
+            </div>
+
+            <div class="books-grid" id="booksGrid">
+                <!-- Cards will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-copy">
+                © 2026 <a href="/">Fr. Dr. Shijo Antony CM</a>. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/blogs/">Blogs</a>
+                <a href="/contact/">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        <i data-lucide="check-circle"></i>
+        <span id="toastMsg">Link copied!</span>
+    </div>
+
+    <script>
+        /* ═══════════ INJECTED STYLES ═══════════ */
+        (function () {
+            const s = document.createElement('style');
+            s.textContent = `
+                    /* ── Cover image ── */
+                    .book-cover-img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center top;
+                        display: block;
+                        border-radius: inherit;
+                        transition: transform 0.5s ease;
+                    }
+                    .book-card:hover .book-cover-img,
+                    .book-card.active .book-cover-img {
+                        transform: scale(1.05);
+                    }
+    
+                    /* ── Cover wrap positioning ── */
+                    .book-cover-wrap {
+                        position: relative !important;
+                        overflow: hidden !important;
+                    }
+    
+                    /* ── Fallback placeholder ── */
+                    .book-cover-placeholder {
+                        display: flex !important;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 100%;
+                        gap: 6px;
+                        padding: 20px;
+                        text-align: center;
+                    }
+    
+                    /* ── Transparent glass overlay on cover ── */
+                    .book-overlay {
+                        position: absolute;
+                        inset: 0;
+                        background: rgba(18, 46, 34, 0.62);
+                        backdrop-filter: blur(6px);
+                        -webkit-backdrop-filter: blur(6px);
+                        border-radius: inherit;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 22px 16px;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: opacity 0.38s ease;
+                        z-index: 10;
+                        overflow-y: auto;
+                    }
+                    .book-card:hover .book-overlay,
+                    .book-card.active .book-overlay {
+                        opacity: 1;
+                        pointer-events: auto;
+                    }
+    
+                    /* ── Overlay content ── */
+                    .book-overlay-inner {
+                        width: 100%;
+                        text-align: center;
+                        color: #fff;
+                    }
+                    .book-overlay-title {
+                        font-size: 14.5px;
+                        font-weight: 700;
+                        line-height: 1.35;
+                        margin-bottom: 8px;
+                        color: #fff;
+                        text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+                    }
+                    .book-overlay-desc {
+                        font-size: 11px;
+                        line-height: 1.65;
+                        color: rgba(255,255,255,0.82);
+                        margin-bottom: 14px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+                    }
+                    .book-overlay-meta {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 5px;
+                    }
+                    .book-meta-chip {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 4px;
+                        font-size: 9.5px;
+                        font-family: inherit;
+                        color: rgba(255,255,255,0.75);
+                        background: rgba(255,255,255,0.12);
+                        border: 1px solid rgba(255,255,255,0.08);
+                        border-radius: 20px;
+                        padding: 3px 9px;
+                        white-space: nowrap;
+                    }
+                    .book-meta-chip svg,
+                    .book-meta-chip i {
+                        width: 10px;
+                        height: 10px;
+                        opacity: 0.7;
+                    }
+    
+                    /* ── Info bar overflow for share dropdown ── */
+                    .book-info-bar {
+                        overflow: visible !important;
+                    }
+                    .book-info-bottom {
+                        position: relative !important;
+                        display: flex !important;
+                        align-items: center !important;
+                        justify-content: space-between !important;
+                        min-height: 34px;
+                    }
+    
+                    /* ── Price & rating (normal state) ── */
+                    .book-price-static,
+                    .book-rating-static {
+                        transition: opacity 0.3s ease, transform 0.3s ease;
+                    }
+                    .book-card:hover .book-price-static,
+                    .book-card.active .book-price-static {
+                        opacity: 0;
+                        transform: translateX(-10px);
+                        pointer-events: none;
+                    }
+                    .book-card:hover .book-rating-static,
+                    .book-card.active .book-rating-static {
+                        opacity: 0;
+                        transform: translateX(10px);
+                        pointer-events: none;
+                    }
+    
+                    /* ── Buy Now button (bottom bar, hover state) ── */
+                    .book-cart-btn {
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%) translateX(-10px);
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 7px;
+                        background: #1B4332;
+                        color: #fff;
+                        border: none;
+                        border-radius: 8px;
+                        padding: 7px 18px;
+                        font-size: 12.5px;
+                        font-weight: 700;
+                        font-family: inherit;
+                        cursor: pointer;
+                        text-decoration: none;
+                        white-space: nowrap;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s, box-shadow 0.2s;
+                        z-index: 5;
+                        line-height: 1;
+                    }
+                    .book-cart-btn:hover {
+                        background: #143528;
+                        box-shadow: 0 4px 14px rgba(27,67,50,0.35);
+                    }
+                    .book-cart-btn:active {
+                        transform: translateY(-50%) scale(0.97);
+                    }
+                    .book-cart-btn svg,
+                    .book-cart-btn i {
+                        width: 14px;
+                        height: 14px;
+                        flex-shrink: 0;
+                    }
+                    .book-card:hover .book-cart-btn,
+                    .book-card.active .book-cart-btn {
+                        opacity: 1;
+                        pointer-events: auto;
+                        transform: translateY(-50%) translateX(0);
+                    }
+    
+                    /* ── Share button (bottom bar, hover state) ── */
+                    .book-share-btn {
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%) translateX(10px);
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 36px;
+                        height: 36px;
+                        background: rgba(27,67,50,0.1);
+                        color: #1B4332;
+                        border: 1.5px solid rgba(27,67,50,0.18);
+                        border-radius: 8px;
+                        cursor: pointer;
+                        flex-shrink: 0;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s, border-color 0.2s;
+                        z-index: 5;
+                        padding: 0;
+                    }
+                    .book-share-btn:hover {
+                        background: rgba(27,67,50,0.15);
+                        border-color: rgba(27,67,50,0.3);
+                    }
+                    .book-share-btn:active {
+                        transform: translateY(-50%) scale(0.93);
+                    }
+                    .book-share-btn svg,
+                    .book-share-btn i {
+                        width: 15px;
+                        height: 15px;
+                    }
+                    .book-card:hover .book-share-btn,
+                    .book-card.active .book-share-btn {
+                        opacity: 1;
+                        pointer-events: auto;
+                        transform: translateY(-50%) translateX(0);
+                    }
+    
+                    /* ── Share dropdown (collapsed, only on click) ── */
+                    .share-dropdown {
+                        position: absolute;
+                        bottom: calc(100% + 10px);
+                        right: -6px;
+                        display: flex;
+                        gap: 4px;
+                        background: rgba(27, 67, 50, 0.97);
+                        border: 1px solid rgba(255,255,255,0.12);
+                        border-radius: 12px;
+                        padding: 6px;
+                        opacity: 0;
+                        pointer-events: none;
+                        transform: translateY(8px) scale(0.92);
+                        transition: opacity 0.25s ease, transform 0.25s ease;
+                        z-index: 40;
+                        white-space: nowrap;
+                        box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+                    }
+                    .share-dropdown::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -5px;
+                        right: 12px;
+                        width: 10px;
+                        height: 10px;
+                        background: rgba(27, 67, 50, 0.97);
+                        border-right: 1px solid rgba(255,255,255,0.12);
+                        border-bottom: 1px solid rgba(255,255,255,0.12);
+                        transform: rotate(45deg);
+                    }
+                    .share-dropdown.open {
+                        opacity: 1;
+                        pointer-events: auto;
+                        transform: translateY(0) scale(1);
+                    }
+                    .share-opt {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 34px;
+                        height: 34px;
+                        border: none;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        transition: background 0.15s, transform 0.15s;
+                        background: transparent;
+                        color: #fff;
+                        padding: 0;
+                    }
+                    .share-opt:hover {
+                        background: rgba(255,255,255,0.15);
+                        transform: scale(1.12);
+                    }
+                    .share-opt:active {
+                        transform: scale(0.92);
+                    }
+                    .share-opt svg,
+                    .share-opt i {
+                        width: 15px;
+                        height: 15px;
+                    }
+    
+                    /* ── Badges fade when overlay shows ── */
+                    .book-cover-wrap .book-genre-badge,
+                    .book-cover-wrap .book-year-badge {
+                        transition: opacity 0.32s ease;
+                        z-index: 5;
+                    }
+                    .book-card:hover .book-cover-wrap .book-genre-badge,
+                    .book-card:hover .book-cover-wrap .book-year-badge,
+                    .book-card.active .book-cover-wrap .book-genre-badge,
+                    .book-card.active .book-cover-wrap .book-year-badge {
+                        opacity: 0;
+                    }
+    
+                    /* ── Mobile: tap hint ── */
+                    @media (hover: none) and (pointer: coarse) {
+                        .book-cover-wrap::before {
+                            content: '';
+                            position: absolute;
+                            inset: 0;
+                            background: rgba(0,0,0,0.12);
+                            border-radius: inherit;
+                            z-index: 4;
+                            pointer-events: none;
+                            opacity: 1;
+                            transition: opacity 0.3s;
+                        }
+                        .book-card.active .book-cover-wrap::before {
+                            opacity: 0;
+                        }
+                    }
+                `;
+            document.head.appendChild(s);
+        })();
+
+        /* ═══════════ BOOK DATA ═══════════ */
+        const books = [
+            {
+                title: "Living Your Own Symphony",
+                subtitle: "A Journey of Discovery",
+                category: "mindfulness",
+                badge: "badge-sage",
+                badgeText: "Mindfulness",
+                year: "2026",
+                price: "₹200",
+                rating: "4.8",
+                pages: "172",
+                lang: "English",
+                isbn: "978-81-0023-2600-1",
+                desc: "this book shows you how to quiet a restless mind, carry life's burdens without breaking, turn wounds into growth, and build the discipline your dreams deserve.",
+                buyUrl: "#",
+                image: "../images/cover.webp",
+                coverGradient: "linear-gradient(150deg, #D1ECEC, #E4DDF2)"
+            },
+            {
+                title: "Joyful Descipleship",
+                subtitle: "Religious Formation",
+                category: "positive-psychology",
+                badge: "badge-gold",
+                badgeText: "Positive",
+                year: "2023",
+                price: "₹180",
+                rating: "4.6",
+                pages: "150",
+                lang: "English",
+                isbn: "978-81-0125-325-2",
+                desc: "A contemporary reading of St. Vincent de Paul's charism and its relevance for modern religious life and social engagement.",
+                buyUrl: "#",
+                image: "../images/cover 2.webp",
+                coverGradient: "linear-gradient(150deg, #F5E6CC, #F4E0E0)"
+            },
+
+        ];
+
+        /* ═══════════ RENDER BOOKS ═══════════ */
+        const grid = document.getElementById('booksGrid');
+
+        function renderBooks(filter) {
+            if (!filter) filter = 'all';
+            var filtered = filter === 'all' ? books : books.filter(function (b) { return b.category === filter; });
+            grid.innerHTML = '';
+
+            filtered.forEach(function (book, i) {
+                var card = document.createElement('div');
+                card.className = 'book-card reveal reveal-delay-' + Math.min(i % 4 + 1, 5);
+                card.dataset.category = book.category;
+
+                /* Cover: image with gradient fallback */
+                var coverHTML;
+                if (book.image) {
+                    coverHTML = '<img class="book-cover-img" src="' + book.image + '" alt="' + book.title + '" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\';">'
+                        + '<div class="book-cover-placeholder" style="background:' + book.coverGradient + ';display:none;">'
+                        + '<svg class="bcp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
+                        + '<div class="bcp-title">' + book.title + '</div>'
+                        + '<div class="bcp-author">' + book.subtitle + '</div>'
+                        + '</div>';
+                } else {
+                    coverHTML = '<div class="book-cover-placeholder" style="background:' + book.coverGradient + ';">'
+                        + '<svg class="bcp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
+                        + '<div class="bcp-title">' + book.title + '</div>'
+                        + '<div class="bcp-author">' + book.subtitle + '</div>'
+                        + '</div>';
+                }
+
+                var safeTitle = book.title.replace(/'/g, "\\'");
+
+                card.innerHTML = ''
+                    + '<div class="book-cover-wrap">'
+                    + coverHTML
+                    + '<span class="book-genre-badge ' + book.badge + '">' + book.badgeText + '</span>'
+                    + '<span class="book-year-badge">' + book.year + '</span>'
+                    + '<div class="book-overlay">'
+                    + '<div class="book-overlay-inner">'
+                    + '<div class="book-overlay-title">' + book.title + '</div>'
+                    + '<div class="book-overlay-desc">' + book.desc + '</div>'
+                    + '<div class="book-overlay-meta">'
+                    + '<span class="book-meta-chip"><i data-lucide="file-text"></i>' + book.pages + ' pages</span>'
+                    + '<span class="book-meta-chip"><i data-lucide="globe"></i>' + book.lang + '</span>'
+                    + '<span class="book-meta-chip"><i data-lucide="hash"></i>' + book.isbn + '</span>'
+                    + '</div>'
+                    + '</div>'
+                    + '</div>'
+                    + '</div>'
+                    + '<div class="book-info-bar">'
+                    + '<h3>' + book.title + '</h3>'
+                    + '<div class="book-sub">' + book.subtitle + '</div>'
+                    + '<div class="book-info-bottom">'
+                    + '<div class="book-price book-price-static"><span class="currency">₹</span>' + book.price.replace('₹', '') + '</div>'
+                    + '<div class="book-rating book-rating-static">'
+                    + '<i data-lucide="star"></i>'
+                    + '<span>' + book.rating + '</span>'
+                    + '</div>'
+                    + '<a href="' + book.buyUrl + '" class="book-cart-btn" target="_blank" rel="noopener" onclick="event.preventDefault();event.stopPropagation();showToast(\'Redirecting to buy ' + safeTitle + '...\');setTimeout(function(){window.open(\'' + book.buyUrl + '\',\'_blank\');},600);">Buy Now <i data-lucide="shopping-bag"></i></a>'
+                    + '<button class="book-share-btn" onclick="event.stopPropagation();toggleShare(this)" aria-label="Share this book">'
+                    + '<i data-lucide="share-2"></i>'
+                    + '<div class="share-dropdown">'
+                    + '<button class="share-opt so-whatsapp" onclick="event.stopPropagation();shareBook(\'whatsapp\',\'' + safeTitle + '\')" title="WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></button>'
+                    + '<button class="share-opt so-facebook" onclick="event.stopPropagation();shareBook(\'facebook\',\'' + safeTitle + '\')" title="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></button>'
+                    + '<button class="share-opt so-twitter" onclick="event.stopPropagation();shareBook(\'twitter\',\'' + safeTitle + '\')" title="X / Twitter"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>'
+                    + '<button class="share-opt so-link" onclick="event.stopPropagation();shareBook(\'link\',\'' + safeTitle + '\')" title="Copy Link"><i data-lucide="link" style="width:16px;height:16px;color:white;"></i></button>'
+                    + '<button class="share-opt so-email" onclick="event.stopPropagation();shareBook(\'email\',\'' + safeTitle + '\')" title="Email"><i data-lucide="mail" style="width:16px;height:16px;color:white;"></i></button>'
+                    + '</div>'
+                    + '</button>'
+                    + '</div>'
+                    + '</div>';
+
+                grid.appendChild(card);
+
+                /* Mobile: tap cover to toggle overlay + bottom buttons */
+                card.querySelector('.book-cover-wrap').addEventListener('click', function (e) {
+                    document.querySelectorAll('.book-card.active').forEach(function (c) {
+                        if (c !== card) c.classList.remove('active');
+                    });
+                    card.classList.toggle('active');
+                });
+            });
+
+            lucide.createIcons();
+
+            requestAnimationFrame(function () {
+                document.querySelectorAll('#booksGrid .reveal').forEach(function (el) {
+                    if (revealObserver) revealObserver.observe(el);
+                });
+            });
+        }
+
+        /* ═══════════ FILTER LOGIC ═══════════ */
+        document.querySelectorAll('.filter-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                renderBooks(btn.dataset.filter);
+            });
+        });
+
+        /* ═══════════ SHARE FUNCTIONS ═══════════ */
+        function toggleShare(btn) {
+            var dropdown = btn.querySelector('.share-dropdown');
+            document.querySelectorAll('.share-dropdown.open').forEach(function (d) {
+                if (d !== dropdown) d.classList.remove('open');
+            });
+            dropdown.classList.toggle('open');
+        }
+
+        function shareBook(platform, title) {
+            var url = encodeURIComponent(window.location.href);
+            var text = encodeURIComponent('Check out "' + title + '" by Fr. Dr. Shijo Antony CM');
+            var shareUrl = '';
+
+            switch (platform) {
+                case 'whatsapp':
+                    shareUrl = 'https://wa.me/?text=' + text + '%20' + url;
+                    break;
+                case 'facebook':
+                    shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+                    break;
+                case 'twitter':
+                    shareUrl = 'https://twitter.com/intent/tweet?text=' + text + '&url=' + url;
+                    break;
+                case 'link':
+                    navigator.clipboard.writeText(window.location.href).then(function () {
+                        showToast('Link copied to clipboard!');
+                    }).catch(function () {
+                        showToast('Could not copy link');
+                    });
+                    closeAllDropdowns();
+                    return;
+                case 'email':
+                    shareUrl = 'mailto:?subject=' + text + '&body=' + url;
+                    break;
+            }
+
+            if (shareUrl) {
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            }
+            closeAllDropdowns();
+            showToast('Sharing "' + title + '" on ' + platform.charAt(0).toUpperCase() + platform.slice(1));
+        }
+
+        function closeAllDropdowns() {
+            document.querySelectorAll('.share-dropdown.open').forEach(function (d) { d.classList.remove('open'); });
+        }
+
+        /* Global click: close share dropdowns & mobile overlays */
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.book-share-btn')) {
+                closeAllDropdowns();
+            }
+            if (!e.target.closest('.book-card')) {
+                document.querySelectorAll('.book-card.active').forEach(function (c) {
+                    c.classList.remove('active');
+                });
+            }
+        });
+
+        /* ═══════════ TOAST ═══════════ */
+        var toastTimer;
+        function showToast(msg) {
+            var toast = document.getElementById('toast');
+            var toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = msg;
+            toast.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 3000);
+        }
+
+        /* ═══════════ LOADER ═══════════ */
+        window.addEventListener('load', function () {
+            var fill = document.getElementById('loaderFill');
+            var progress = 0;
+            var interval = setInterval(function () {
+                progress += Math.random() * 25 + 10;
+                if (progress >= 100) {
+                    progress = 100;
+                    fill.style.width = '100%';
+                    clearInterval(interval);
+                    setTimeout(function () {
+                        document.getElementById('loader').classList.add('hidden');
+                        initAnimations();
+                    }, 400);
+                } else {
+                    fill.style.width = progress + '%';
+                }
+            }, 200);
+        });
+
+        /* ═══════════ FALLING LEAVES ═══════════ */
+        function createLeaves() {
+            var container = document.getElementById('fallingLeaves');
+            var leafSVG = '<svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 3C15 3 25 10 25 19C25 24.5 20.5 27 15 27C9.5 27 5 24.5 5 19C5 10 15 3 15 3Z" fill="currentColor" opacity=".6"/><path d="M15 3C15 3 25 10 25 19C25 24.5 20.5 27 15 27" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>';
+            var colors = ['#5BA4A4', '#C9944A', '#8B7EB8', '#A8D8C8', '#8CC4C4'];
+
+            for (var i = 0; i < 14; i++) {
+                var leaf = document.createElement('div');
+                leaf.className = 'falling-leaf';
+                var size = Math.random() * 16 + 12;
+                leaf.style.cssText = 'left:' + (Math.random() * 100) + '%;width:' + size + 'px;height:' + (size * 1.4) + 'px;color:' + colors[i % colors.length] + ';--l-sway:' + (Math.random() * 50 + 20) + 'px;--l-alpha:' + (Math.random() * 0.1 + 0.06) + ';animation-duration:' + (Math.random() * 15 + 18) + 's;animation-delay:' + (Math.random() * -25) + 's;';
+                leaf.innerHTML = leafSVG;
+                container.appendChild(leaf);
+            }
+        }
+        createLeaves();
+
+        /* ═══════════ NAV SCROLL ═══════════ */
+        window.addEventListener('scroll', function () {
+            var nav = document.getElementById('mainNav');
+            if (window.scrollY > 40) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        /* ═══════════ MOBILE MENU ═══════════ */
+        var mobileToggle = document.getElementById('mobileToggle');
+        var mobileMenu = document.getElementById('mobileMenu');
+
+        mobileToggle.addEventListener('click', function () {
+            mobileToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () {
+                mobileToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        /* ═══════════ REVEAL OBSERVER ═══════════ */
+        var revealObserver;
+        function initAnimations() {
+            revealObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                revealObserver.observe(el);
+            });
+
+            document.querySelectorAll('[data-count]').forEach(function (el) {
+                var target = parseInt(el.dataset.count);
+                var current = 0;
+                var step = Math.ceil(target / 30);
+                var counter = setInterval(function () {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(counter);
+                    }
+                    el.textContent = current + '+';
+                }, 50);
+            });
+        }
+
+        /* ═══════════ INIT ═══════════ */
+        renderBooks('all');
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
