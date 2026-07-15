@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fr. Dr. Shijo Antony CM</title>
+    <link rel="canonical" href="https://shijocm.com/">
+    <title>Fr. Dr. Shijo Antony CM | Psychologist in Kerala | Author</title>
+    <meta name="description"
+        content="Official website of Fr. Dr. Shijo Antony CM, psychologist, researcher, author, and speaker. Explore publications, blogs, mental health insights, psychology research, and professional work in Kerala, India.">
+    <meta name="keywords"
+        content="Fr. Dr. Shijo Antony CM, Shijo Antony, psychologist in Kerala, counselling psychologist Kerala, mental health expert Kerala, psychology researcher, psychologist, author, publications, research, blogs, counselling, psychotherapy, mental wellness, speaker, educator">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
         rel="stylesheet">
@@ -916,6 +921,7 @@
             transition: all .35s cubic-bezier(.4, 0, .2, 1);
         }
 
+
         .btn-outline:hover {
             background: var(--forest);
             color: white;
@@ -927,9 +933,41 @@
             height: 15px;
         }
 
+        .btn-ct {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: 160px;
+
+            margin-bottom: 10px;
+            background: transparent;
+            color: var(--forest);
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1.5px solid var(--sage-light);
+            cursor: pointer;
+            transition: all .35s cubic-bezier(.4, 0, .2, 1);
+        }
+
+
+        .btn-ct:hover {
+            background: var(--forest);
+            color: white;
+            border-color: var(--forest);
+        }
+
+        .btn-ct i {
+            width: 15px;
+            height: 15px;
+        }
+
         /* ═══════════ SECTION COMMON ═══════════ */
         .section-wrap {
-            padding: 100px 32px;
+            padding: 10px 32px;
             position: relative;
             overflow: hidden;
         }
@@ -1345,7 +1383,7 @@
         }
 
         .section-wrap.areas-bg {
-            padding-bottom: 140px;
+            padding-bottom: 100px;
         }
 
         .areas-grid {
@@ -1618,7 +1656,7 @@
         .lang-layout {
             display: grid;
             grid-template-columns: 1fr 1.6fr;
-            gap: 60px;
+            gap: 10px;
             align-items: center;
             width: 100%;
         }
@@ -2130,7 +2168,7 @@
 
         .cta-handwritten {
             font-family: 'Caveat', cursive;
-            font-size: 22px;
+            font-size: 32px;
             color: var(--forest-mid);
             margin-top: 20px;
             position: relative;
@@ -2559,7 +2597,7 @@
 
             .lang-layout {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 20px;
             }
 
             .lang-proficiency {
@@ -2774,7 +2812,7 @@
             }
 
             .section-wrap {
-                padding: 70px 16px;
+                padding: 10px 5px;
             }
 
             .lang-globe-wrap {
@@ -2816,6 +2854,47 @@
             .emergency-btn-icon i {
                 width: 20px;
                 height: 20px;
+            }
+
+            /* =======================================================
+   Mobile Emergency Button - Tap to Expand
+   ======================================================= */
+            @media (max-width:768px) {
+
+                /* Keep button collapsed initially */
+                .emergency-btn {
+                    width: 60px;
+                    min-width: 60px;
+                    overflow: hidden;
+                    transition:
+                        width .35s ease,
+                        border-radius .35s ease,
+                        background .3s ease;
+                }
+
+                .emergency-btn .emergency-btn-text {
+                    opacity: 0;
+                    max-width: 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    margin-left: 0;
+                    transition:
+                        opacity .25s ease,
+                        max-width .35s ease,
+                        margin-left .35s ease;
+                }
+
+                /* Expanded State */
+                .emergency-btn.mobile-expanded {
+                    width: 260px;
+                    border-radius: 40px;
+                }
+
+                .emergency-btn.mobile-expanded .emergency-btn-text {
+                    opacity: 1;
+                    max-width: 220px;
+                    margin-left: 12px;
+                }
             }
 
             .back-to-top {
@@ -2862,15 +2941,15 @@
     <!-- NAV -->
     <nav class="nav" id="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
+            <a href="/" class="nav-logo">
                 <div class="nav-logo-icon"><i data-lucide="hand-heart"></i></div>
             </a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#areas">Services</a></li>
-                <li><a href="#blog">Writings</a></li>
-                <li><a href="#contact" class="nav-cta">Book a Session</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="/published/">Published</a></li>
+                <li><a href="/blogs/">Blogs</a></li>
+                <li><a href="/#contact" class="nav-cta">Connect</a></li>
             </ul>
             <button class="mobile-toggle" id="menuToggle" aria-label="Menu">
                 <div class="icon-menu"><i data-lucide="menu" style="width:22px;height:22px;"></i></div>
@@ -2881,11 +2960,11 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#areas">Services</a>
-        <a href="#blog">Writings</a>
-        <a href="#contact" style="color:var(--forest);font-weight:600;">Book a Session</a>
+        <a href="/">Home</a>
+        <a href="/contact/">Contact</a>
+        <a href="/published/">Published</a>
+        <a href="/blogs/">Blogs</a>
+        <a href="/#contact" style="color:var(--forest);font-weight:600;">Connect</a>
     </div>
 
     <!-- HERO -->
@@ -2904,19 +2983,20 @@
             <div class="hero-content" id="heroContent">
                 <p class="hero-greeting">Welcome, I'm</p>
                 <h1 class="hero-name">Fr. Dr. Shijo Antony CM</h1>
-                <p class="hero-roles">Priest <span class="dot"></span> Psychologist <span class="dot"></span> Healer</p>
+                <p class="hero-roles">Priest <span class="dot"></span> Psychologist <span class="dot"></span>Canon Lawer
+                </p>
                 <p class="hero-desc">Guiding souls toward wholeness through the gentle intersection of faith and
-                    psychology — helping you find peace, clarity, and renewed purpose in life's journey.</p>
+                    psychology helping you find peace, clarity, and renewed purpose in life's journey.</p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn-primary">Book a Session <i data-lucide="arrow-right"></i></a>
-                    <a href="#about" class="btn-ghost"><i data-lucide="play-circle"></i> My Story</a>
+                    <a href="/#contact" class="btn-primary">Connect <i data-lucide="arrow-right"></i></a>
+                    <a href="/#about" class="btn-ghost"><i data-lucide="play-circle"></i> My Story</a>
                 </div>
             </div>
             <div class="hero-visual" id="heroVisual">
                 <div class="hero-img-wrap">
                     <div class="hero-img-outline" id="heroImgOutline"></div>
                     <div class="hero-img-glow"></div>
-                    <img src="./images/herofull.png" alt="Fr. Dr. Shijo Antony CM" class="hero-png-img"
+                    <img src="./images/herofull.webp" alt="Fr. Dr. Shijo Antony CM" class="hero-png-img"
                         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                     <div class="about-img-placeholder"
                         style="display:none;width:100%;height:100%;background:linear-gradient(150deg,var(--sage-ghost),var(--sky-pale),var(--mint-pale));align-items:center;justify-content:center;color:var(--sage-light);position:relative;z-index:2;">
@@ -2927,21 +3007,14 @@
         </div>
     </section>
 
-    <!-- Divider -->
-    <div class="section-divider">
-        <svg viewBox="0 0 160 24" fill="none">
-            <path d="M10 12 Q40 4 80 12 Q120 20 150 12" stroke="var(--sage-light)" stroke-width="1" fill="none"
-                opacity=".4" />
-            <circle cx="80" cy="12" r="2.5" fill="var(--sage-light)" opacity=".3" />
-        </svg>
-    </div>
+
 
     <!-- ABOUT -->
     <section class="section-wrap about-bg" id="about">
         <div class="section-inner about-inner">
             <div class="about-img-wrap reveal" style="position:relative;">
                 <div class="about-img-frame">
-                    <div class="about-img-placeholder"><img src="./images/herofullpastel.jpg">></div>
+                    <div class="about-img-placeholder"><img src="./images/herofullpastel.webp">></div>
                 </div>
                 <div class="about-img-accent"></div>
 
@@ -2956,13 +3029,7 @@
                     qualifications include a degree in Psychology from Union Christian College, Aluva, a Doctorate in
                     Canon Law from Spain,
                     and a Doctorate in Positive Psychology from the United States.</p>
-                <p class="about-text">Professional credentials include licensure as a Positive Psychology Practitioner
-                    through the American Board of Positive
-                    Psychology, along with certification in Artificial Intelligence from Google. The integration of
-                    psychology,
-                    spirituality, and emerging technologies continues to guide efforts toward fostering holistic
-                    well-being, resilience, and
-                    human flourishing.</p>
+
                 <p class="about-quote">Healing begins when pain is no longer hidden, but understood.</p>
                 <div class="about-creds">
 
@@ -3130,33 +3197,35 @@
                 <div class="highlight-box reveal">
                     <div class="highlight-content">
                         <div class="highlight-icon qi-1"><i data-lucide="home"></i></div>
-                        <div class="section-label">Founded</div>
+                        <h3>Founded</h3>
 
                         <!-- Small Logo centered above name -->
                         <div class="highlight-logo">
-                            <img src="./images/dpwlogo.png" alt="De Paul Wellness Centre Logo"
+                            <img src="./images/dpwlogo.webp" alt="De Paul Wellness Centre Logo"
                                 onerror="this.parentElement.style.display='none'">
                         </div>
 
                         <h3>De Paul Wellness Centre</h3>
-                        <p>A dedicated space for personal transformation integrating mindfulness, positive psychology,
-                            and holistic well-being practices for individuals and communities seeking renewal.</p>
-                        <a href="#" class="btn-outline">Visit Website <i data-lucide="external-link"></i></a>
+                        <p>A dedicated wellness center in Aluva promoting mental well-being, emotional balance, and
+                            lasting happiness through
+                            compassionate support for individuals and communities seeking holistic growth.</p>
+                        <a href="https://depaulwellness.com/" target="_blank" class="btn-outline">Visit Website <i
+                                data-lucide="external-link"></i></a>
                     </div>
                 </div>
                 <div class="highlight-box reveal reveal-delay-1">
                     <div class="highlight-content">
                         <div class="highlight-icon qi-2"><i data-lucide="book-open"></i></div>
-                        <div class="section-label">Latest Publication</div>
-                        <h3>Joyful Discipleship: Integrating Positive Psychology into Priestly & Religious Formation
-                        </h3>
-                        <p>A pioneering work bridging the science of human flourishing with the vocation of priestly and
-                            religious life offering a fresh, hope-filled vision for formation and ministry.</p>
-                        <p>Drawing on contemporary research in Positive Psychology and years of pastoral experience, the
-                            book explores how relationships can enrich the
-                            spiritual and personal
-                            development.</p>
-                        <a href="#" class="btn-outline">Read More <i data-lucide="arrow-right"></i></a>
+
+                        <h3>Books & Publications</h3><br>
+                        <p>Explore a growing collection of books and publications on mental well-being, positive
+                            psychology, counselling,
+                            emotional resilience, and holistic human development for individuals, families, and
+                            communities.</p><br>
+                        <p>Discover practical insights, evidence-based approaches, and inspiring resources that promote
+                            emotional wellness,
+                            personal growth, and compassionate care. Click below to browse the complete collection.</p>
+                        <a href="/published/" class="btn-outline">View All <i data-lucide="arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -3169,7 +3238,7 @@
             <div class="section-header reveal">
                 <div class="section-label">Global Reach</div>
                 <h2 class="section-title">Languages, Writing & <span class="hl">Travel</span></h2>
-                <p class="section-desc">Conversant in several Indian and foreign languages — a gift honed through
+                <p class="section-desc">Conversant in several Indian and foreign languages a gift honed through
                     encounters with people across more than 40 countries. A regular contributor of articles to Radio
                     Veritas Asia, Fr. Shijo writes at the crossroads of psychology, faith, and culture.</p>
             </div>
@@ -3192,7 +3261,7 @@
                             <div class="lang-globe-dot"></div>
                         </div>
                     </div>
-                    <p class="lang-visual-text">Every language learned, every culture embraced — another bridge to a
+                    <p class="lang-visual-text">Every language learned, every culture embraced another bridge to a
                         soul in need.</p>
                 </div>
                 <div class="lang-proficiency">
@@ -3245,136 +3314,27 @@
 
                 </div>
             </div>
-            <div class="lang-tags-wrap reveal">
-                <h3 class="lang-tags-title font-hand">Interested Topics</h3>
-                <div class="lang-bottom-tags">
-                    <div class="tag-item">Canon Law</div>
-                    <div class="tag-item">Positive Psychology</div>
-                    <div class="tag-item">Mindfulness</div>
-                    <div class="tag-item">Photography</div>
-                    <div class="tag-item">Multilingual Ministry</div>
-                    <div class="tag-item">AI & Education</div>
-                    <div class="tag-item">Radio Veritas Asia</div>
-                    <div class="tag-item">Missionary Life</div>
-                    <div class="tag-item">Holistic Wellness</div>
-                    <div class="tag-item">Vincentian Charism</div>
-                    <div class="tag-item">Cross-Cultural Dialogue</div>
-                    <div class="tag-item">Spiritual Direction</div>
-                </div>
-            </div>
+
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="section-wrap" id="testimonials">
-        <div class="section-inner">
-            <div class="section-header reveal">
-                <div class="section-label">Testimonials</div>
-                <h2 class="section-title">Words of <span class="hl">Hope</span></h2>
-            </div>
-            <div class="test-grid">
-                <div class="test-card reveal">
-                    <div class="test-stars"><i data-lucide="star"></i><i data-lucide="star"></i><i
-                            data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
-                    <blockquote>I came to Fr. Shijo during the hardest year of my life. He didn't offer platitudes — he
-                        offered presence. That made all the difference.</blockquote>
-                    <div class="test-author">
-                        <div class="test-avatar" style="background:var(--sage-ghost);color:var(--forest);">M</div>
-                        <div>
-                            <div class="test-name">Maria T.</div>
-                            <div class="test-role">Individual Counselling</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="test-card reveal reveal-delay-1">
-                    <div class="test-stars"><i data-lucide="star"></i><i data-lucide="star"></i><i
-                            data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
-                    <blockquote>We were ready to give up on our marriage. Fr. Shijo helped us see each other again — not
-                        through blame, but through understanding and grace.</blockquote>
-                    <div class="test-author">
-                        <div class="test-avatar" style="background:var(--gold-pale);color:var(--gold);">D</div>
-                        <div>
-                            <div class="test-name">David & Rachel K.</div>
-                            <div class="test-role">Couples Therapy</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="test-card reveal reveal-delay-2">
-                    <div class="test-stars"><i data-lucide="star"></i><i data-lucide="star"></i><i
-                            data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
-                    <blockquote>The inner healing prayer sessions brought a peace I hadn't felt in years. I walked in
-                        carrying years of pain — I walked out feeling genuinely free.</blockquote>
-                    <div class="test-author">
-                        <div class="test-avatar" style="background:var(--lavender-pale);color:var(--lavender);">S</div>
-                        <div>
-                            <div class="test-name">Sarah L.</div>
-                            <div class="test-role">Inner Healing Prayer</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- BLOG -->
-    <section class="section-wrap" id="blog"
-        style="background:linear-gradient(180deg,var(--cream),var(--sky-soft) 50%,var(--cream));">
-        <div class="section-inner">
-            <div class="section-header reveal">
-                <div class="section-label">Insights</div>
-                <h2 class="section-title">Latest from the <span class="hl">Blog</span></h2>
-                <p class="section-desc">Reflections and practical wisdom at the crossroads of psychology, faith, and
-                    mindful living.</p>
-            </div>
-            <div class="blog-layout reveal">
-                <div class="blog-featured">
-                    <img src="https://picsum.photos/seed/contemplative-still/800/500.jpg" alt="Mindfulness"
-                        class="blog-img">
-                    <div class="blog-body">
-                        <div class="blog-meta">Mindfulness · 5 min read</div>
-                        <h4>The Contemplative Pause: Finding God in the Stillness</h4>
-                        <p>How weaving ancient contemplative practices into the rhythm of modern life can reshape your
-                            days — not by adding more, but by noticing what's already there.</p>
-                        <a href="#" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="blog-side">
-                    <div class="blog-card-sm">
-                        <img src="https://picsum.photos/seed/flourishing-min/200/160.jpg" alt="Positive Psychology"
-                            class="blog-img-sm">
-                        <div>
-                            <div class="blog-meta">Positive Psychology</div>
-                            <h4>Why Priests Need the Science of Flourishing</h4>
-                            <p>Exploring how well-being research is essential for those in ministry.</p>
-                            <a href="#" class="blog-link">Read <i data-lucide="arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-card-sm">
-                        <img src="https://picsum.photos/seed/divine-lens/200/160.jpg" alt="Photography"
-                            class="blog-img-sm">
-                        <div>
-                            <div class="blog-meta">Photography</div>
-                            <h4>Seeing the Divine: A Lens as Spiritual Practice</h4>
-                            <p>How capturing light through a camera becomes an act of noticing God.</p>
-                            <a href="#" class="blog-link">Read <i data-lucide="arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
 
     <!-- CTA -->
     <section class="section-wrap" id="contact">
         <div class="cta-inner reveal" style="position:relative;">
-            <div class="section-label" style="justify-content:center;">Get Started</div>
+            <div class="section-label" style="justify-content:center;">Get In Touch</div>
             <h2 class="section-title">Ready to Begin Your<br><span class="font-hand"
                     style="font-size:1.15em;color:var(--forest-mid);">Healing Journey?</span></h2>
-            <p>You don't have to walk this path alone. Take the first step toward peace, clarity, and wholeness; I'm
-                here when you're ready.</p>
-            <a href="mailto:frshijo@example.com" class="btn-primary" style="font-size:16px;padding:16px 36px;">
-                Book a Session <i data-lucide="arrow-right"></i>
+
+            <a href="/contact/" class="btn-primary"
+                style="font-size:16px;padding:16px 36px; margin-bottom: 10px;">Contact <i
+                    data-lucide="arrow-right"></i></a><br>
+
             </a>
+
             <p class="cta-handwritten">With prayer and presence Fr. Shijo</p>
         </div>
     </section>
@@ -3391,14 +3351,16 @@
             </div>
             <div class="footer-links">
 
-                <a href="#about">About</a>
+                <a href="/contact/">Contact</a>
 
-                <a href="#areas">Services</a>
+                <a href="/blogs/">Blogs</a>
+
+                <a href="/published/">Publications</a>
 
             </div>
             <div class="footer-socials">
-                <a href="#" aria-label="Mail"><i data-lucide="mail"></i></a>
-                <a href="#" aria-label="Instagram">
+                <a href="mailto:shijocm@gmail.com" aria-label="Mail"><i data-lucide="mail"></i></a>
+                <a href="https://www.instagram.com/shijo_cm?utm_source=qr" aria-label="Instagram">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
@@ -3406,7 +3368,7 @@
                         <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                     </svg>
                 </a>
-                <a href="#" aria-label="Facebook">
+                <a href="https://www.instagram.com/shijo_cm?utm_source=qr" aria-label="Facebook">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -3685,6 +3647,54 @@
                 ticking = true;
             }
         }, { passive: true });
+
+        /* =======================================================
+       Mobile Emergency Button Expand
+       First Tap  -> Expand
+       Second Tap -> Call
+       ======================================================= */
+
+        (() => {
+
+            const btn = document.getElementById("emergencyBtn");
+
+            if (!btn) return;
+
+            let expanded = false;
+
+            btn.addEventListener("click", function (e) {
+
+                if (window.innerWidth > 768) return;
+
+                if (!expanded) {
+
+                    e.preventDefault();
+
+                    expanded = true;
+                    btn.classList.add("mobile-expanded");
+
+                    // Collapse automatically after 5 seconds
+                    clearTimeout(btn.expandTimeout);
+
+                    btn.expandTimeout = setTimeout(() => {
+                        expanded = false;
+                        btn.classList.remove("mobile-expanded");
+                    }, 5000);
+
+                }
+                // Second tap proceeds normally to tel:
+            });
+
+            window.addEventListener("resize", () => {
+
+                if (window.innerWidth > 768) {
+                    expanded = false;
+                    btn.classList.remove("mobile-expanded");
+                }
+
+            });
+
+        })();
 
         // ═══════════ FALLING LEAVES ═══════════
         const leafSVGs = [
