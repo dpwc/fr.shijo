@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#5f6f5a">
     <link rel="canonical" href="https://shijocm.com/">
     <title>Fr. Dr. Shijo Antony CM | Psychologist in Kerala | Author</title>
     <meta name="description"
@@ -1057,18 +1064,24 @@
         }
 
         .about-inner {
-            display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 70px;
+            display: flex;
+            flex-direction: column;
             align-items: center;
+            gap: 50px;
         }
 
         .about-img-wrap {
             position: relative;
-            width: 100%;
-            max-width: 380px;
-            margin: 0 auto;
+            width: 320px;
+            flex-shrink: 0;
         }
+
+        .about-content {
+            text-align: center;
+            max-width: 680px;
+        }
+
+
 
         .about-img-frame {
             width: 100%;
@@ -1169,6 +1182,7 @@
             gap: 12px;
             margin-top: 28px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .cred-item {
@@ -2526,16 +2540,10 @@
                 height: 370px;
             }
 
-            .about-inner {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
 
-            .about-img-wrap {
-                max-width: 340px;
-            }
 
             .about-content {
+
                 text-align: center;
             }
 
@@ -2543,8 +2551,35 @@
                 justify-content: center;
             }
 
+            .about-content .section-label::before {
+                display: none;
+            }
+
             .about-content .section-label::after {
-                display: inline;
+                display: none;
+            }
+
+            .about-content {
+                text-align: center;
+            }
+
+            .about-quote {
+                border-left: none;
+                border-bottom: 3px solid var(--gold-light);
+                padding: 20px 0 20px 0;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 480px;
+            }
+
+            .about-quote::before {
+                left: 50%;
+                transform: translateX(-50%);
+                top: -20px;
+            }
+
+            .about-creds {
+                justify-content: center;
             }
 
             .about-quote {
@@ -3012,13 +3047,7 @@
     <!-- ABOUT -->
     <section class="section-wrap about-bg" id="about">
         <div class="section-inner about-inner">
-            <div class="about-img-wrap reveal" style="position:relative;">
-                <div class="about-img-frame">
-                    <div class="about-img-placeholder"><img src="./images/herofullpastel.webp">></div>
-                </div>
-                <div class="about-img-accent"></div>
 
-            </div>
             <div class="about-content reveal">
                 <div class="section-label">About Me</div>
                 <h2 class="section-title">Where Faith Meets<br><span class="hl">Understanding</span></h2>
@@ -3284,32 +3313,68 @@
                         <span class="lang-prog-pct">95%</span>
                     </div>
                     <div class="lang-prog-item">
-                        <span class="lang-prog-label">Hindi</span>
+                        <span class="lang-prog-label">Spanish</span>
                         <div class="lang-prog-track">
                             <div class="lang-prog-fill"
-                                style="--prog-w:90%;background:linear-gradient(90deg,var(--gold-light),var(--gold));">
+                                style="--prog-w:90%;background:linear-gradient(90deg,var(--sage-light),var(--sage));">
                             </div>
                         </div>
                         <span class="lang-prog-pct">90%</span>
                     </div>
                     <div class="lang-prog-item">
+                        <span class="lang-prog-label">Italian</span>
+                        <div class="lang-prog-track">
+                            <div class="lang-prog-fill"
+                                style="--prog-w:75%;background:linear-gradient(90deg,var(--sage-light),var(--sage));">
+                            </div>
+                        </div>
+                        <span class="lang-prog-pct">75%</span>
+                    </div>
+                    <div class="lang-prog-item">
+                        <span class="lang-prog-label">Kannada</span>
+                        <div class="lang-prog-track">
+                            <div class="lang-prog-fill"
+                                style="--prog-w:60%;background:linear-gradient(90deg,var(--sage-light),var(--sage));">
+                            </div>
+                        </div>
+                        <span class="lang-prog-pct">60%</span>
+                    </div>
+                    <div class="lang-prog-item">
+                        <span class="lang-prog-label">Hindi</span>
+                        <div class="lang-prog-track">
+                            <div class="lang-prog-fill"
+                                style="--prog-w:55%;background:linear-gradient(90deg,var(--gold-light),var(--gold));">
+                            </div>
+                        </div>
+                        <span class="lang-prog-pct">55%</span>
+                    </div>
+                    <div class="lang-prog-item">
                         <span class="lang-prog-label">Tamil</span>
                         <div class="lang-prog-track">
                             <div class="lang-prog-fill"
-                                style="--prog-w:85%;background:linear-gradient(90deg,var(--lavender-pale),var(--lavender));">
+                                style="--prog-w:50%;background:linear-gradient(90deg,var(--lavender-pale),var(--lavender));">
                             </div>
                         </div>
-                        <span class="lang-prog-pct">85%</span>
+                        <span class="lang-prog-pct">50%</span>
+                    </div>
+                    <div class="lang-prog-item">
+                        <span class="lang-prog-label">Odiya</span>
+                        <div class="lang-prog-track">
+                            <div class="lang-prog-fill"
+                                style="--prog-w:45%;background:linear-gradient(90deg,var(--sage-light),var(--sage));">
+                            </div>
+                        </div>
+                        <span class="lang-prog-pct">45%</span>
                     </div>
 
                     <div class="lang-prog-item">
-                        <span class="lang-prog-label">Spanish</span>
+                        <span class="lang-prog-label">French</span>
                         <div class="lang-prog-track">
                             <div class="lang-prog-fill"
-                                style="--prog-w:30%;background:linear-gradient(90deg,var(--rose-pale),var(--rose));">
+                                style="--prog-w:45%;background:linear-gradient(90deg,var(--rose-pale),var(--rose));">
                             </div>
                         </div>
-                        <span class="lang-prog-pct">30%</span>
+                        <span class="lang-prog-pct">45%</span>
                     </div>
 
                 </div>
